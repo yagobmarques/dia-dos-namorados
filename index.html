@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yago & Livian ❤️</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link  href="style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal" id="modal-chave-secreta" style="display: none; height: 100%; width: 100%;">
+        <div class="modal-content">
+            <h2>Digite a chave secreta</h2>
+            <br>
+            <input type="password" id="chave-secreta" placeholder="Chave secreta">
+            <br>
+            <div style="display: flex; justify-content: space-between; float: left; padding: 10px">
+                <button class="col-md-4" id="btn-verificar-chave">Verificar senha</button>
+                <button class="col-md-4" id="btn-revelar-chave" >Revelar senha</button>            
+            </div>
+            <p id="mensagem-erro"></p>
+            <p id="mensagem-revelada"></p>
+        </div>
+    </div>
+    <div class="container center" id="conteudo-pagina" style="display: none;">
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
+        <h1 class="text-center mt-5">Coleção de Memórias do Nosso Namoro ❤️</h1>
+        <div class="flex-container col-md-12 text-center" id="row-imagens">
+        </div>
+        <div class="modal fade" id="imagemModal" tabindex="-1" role="dialog" aria-labelledby="imagemModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="" alt="" id="imagemAmpliada">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+
+</body>
+
+</html>
