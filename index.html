@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yago & Livian ❤️</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <link  href="style.css" rel="stylesheet">
     
+    <link href="style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- Modal -->
+    <!-- Modal
     <div class="modal" id="modal-chave-secreta" style="display: none; height: 100%; width: 100%;">
-        <div class="modal-content">
+        <div class="modal-content" style="padding: 1rem;">
             <h2>Digite a chave secreta</h2>
             <br>
             <input type="password" id="chave-secreta" placeholder="Chave secreta">
@@ -25,12 +26,33 @@
             <p id="mensagem-erro"></p>
             <p id="mensagem-revelada"></p>
         </div>
+    </div> -->
+    <div class="modal" id="modal-chave-secreta" style="padding: 1rem;" tabindex="-1" role="dialog" aria-labelledby="modal-chave-secreta-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="padding: 1rem;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-chave-secreta-label">Digite a chave secreta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="password" class="form-control" id="chave-secreta" placeholder="Chave secreta">
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-primary" id="btn-verificar-chave">Verificar senha</button>
+                        <button class="btn btn-secondary" id="btn-revelar-chave">Revelar senha</button>
+                    </div>
+                    <p class="text-danger mt-3" id="mensagem-erro"></p>
+                    <p class="text-success mt-3" id="mensagem-revelada"></p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container center" id="conteudo-pagina" style="display: none;">
         <div id="loader">
             <div class="spinner"></div>
         </div>
-        <h1 class="text-center mt-5">Coleção de Memórias do Nosso Namoro ❤️</h1>
+        <h1 class="text-center mt-5" style="margin-bottom: 2rem;">Coleção de Memórias do Nosso Namoro ❤️</h1>
         <div class="flex-container col-md-12 text-center" id="row-imagens">
         </div>
         <div class="modal fade" id="imagemModal" tabindex="-1" role="dialog" aria-labelledby="imagemModalLabel"
@@ -46,6 +68,7 @@
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        
         <script src="script.js"></script>
 
 </body>

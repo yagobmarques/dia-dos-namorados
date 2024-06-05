@@ -2,7 +2,7 @@
     margin: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
     width: 300px;
     background-color: white;
 }
@@ -10,6 +10,11 @@
 .imagem:hover {
     border-color: #aaa;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+    color: black;
+    padding: 0;
 }
 
 .modal {
@@ -25,7 +30,7 @@
 .modal-content {
     background-color: #f9f9f9;
     margin: 10% auto;
-    padding: 20px;
+    padding: 0;
     border: 1px solid #888;
     width: 70%;
 }
@@ -41,7 +46,7 @@
 .modal-body img {
     width: 100%;
     height: auto;
-    margin: 20px auto;
+    /* margin: 20px auto; */
 }
 
 body {

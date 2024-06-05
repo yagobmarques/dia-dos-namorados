@@ -68,7 +68,7 @@ $(document).ready(function () {
         container.empty();
         imagens.forEach(function (imagem) {
             var img = $('<img>').attr('src', imagem.url).attr('width', '100%').attr('alt', 'Foto com Namorada');
-            var imagemDiv = $('<div>').addClass('imagem col-md-3 fade-in').append(
+            var imagemDiv = $('<div>').addClass('imagem col-md-3 fade-in').attr('style', 'padding:1rem').append(
                 $('<h5>').text(imagem.titulo),
                 img,
                 $('<p>').text(imagem.descricao),
@@ -101,7 +101,7 @@ const mensagemErro = document.getElementById('mensagem-erro');
 const mensagemRevelada = document.getElementById('mensagem-revelada');
 
 const btnRevelarChave = document.getElementById('btn-revelar-chave');
-var contTentativas = 4;
+var contTentativas = 10;
 var contTentativas2 = 3;
 
 const chaveSecretaCorreta = 'yagolhoelivianlho';
@@ -115,11 +115,11 @@ function fuja() {
     var alturaJanela = window.innerHeight;
 
     
-    var maxX = larguraJanela - btnRevelarChave.offsetWidth - 300;
-    var maxY = alturaJanela - btnRevelarChave.offsetHeight - 300;
-    
-    var aleatorioX = Math.floor(Math.random() * maxX);
-    var aleatorioY = Math.floor(Math.random() * maxY);
+    var maxX = larguraJanela/2 - btnRevelarChave.offsetWidth - 200;
+    var maxY = alturaJanela/2 - btnRevelarChave.offsetHeight - 200;
+    Math.abs()
+    var aleatorioX = Math.abs(Math.floor(Math.random() * maxX));
+    var aleatorioY = Math.abs(Math.floor(Math.random() * maxY));
     console.log(larguraJanela, alturaJanela)
     console.log(btnRevelarChave.offsetWidth, btnRevelarChave.offsetHeight)
     console.log(maxX, maxY)
