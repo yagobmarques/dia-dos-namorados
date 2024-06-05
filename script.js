@@ -120,15 +120,13 @@ function fuja() {
     Math.abs()
     var aleatorioX = Math.abs(Math.floor(Math.random() * maxX));
     var aleatorioY = Math.abs(Math.floor(Math.random() * maxY));
-    console.log(larguraJanela, alturaJanela)
-    console.log(btnRevelarChave.offsetWidth, btnRevelarChave.offsetHeight)
-    console.log(maxX, maxY)
-    console.log(aleatorioX, aleatorioY)
+
     btnRevelarChave.style.left = aleatorioX + "px";
     btnRevelarChave.style.top = aleatorioY + "px";
 
     console.log(aleatorioX + "px", aleatorioY + "px")
     contTentativas--;
+    btnRevelarChave.blur()
     if (contTentativas == 0){
         console.log("A senha é: ", chaveSecretaCorreta)
         btnRevelarChave.style.display = "none";
@@ -142,7 +140,6 @@ btnRevelarChave.addEventListener("mouseover", fuja, false);
 
 btnVerificarChave.addEventListener('click', () => {
     const chaveSecretaDigitada = inputChaveSecreta.value.trim();
-    console.log("1",chaveSecretaDigitada, "1")
     if(!chaveSecretaDigitada){
         mensagemErro.textContent = 'Tá de brincation with me? Digite uma senha, rumlio  '
         
@@ -153,6 +150,7 @@ btnVerificarChave.addEventListener('click', () => {
         } else {
             contTentativas2--;
             mensagemErro.textContent = 'Chave secreta incorreta!'
+            inputChaveSecreta.value = "";
             if(contTentativas2 == 0){
                 btnRevelarChave.style.display = "block";
                 alert("Eitan!")
