@@ -111,22 +111,24 @@ window.onload = () => {
 };
 
 function fuja() {
+    this.blur()
+    conteudoPagina.focus()
     var larguraJanela = window.innerWidth;
     var alturaJanela = window.innerHeight;
 
     
-    var maxX = larguraJanela/2 - btnRevelarChave.offsetWidth - 200;
-    var maxY = alturaJanela/2 - btnRevelarChave.offsetHeight - 200;
-    Math.abs()
-    var aleatorioX = Math.abs(Math.floor(Math.random() * maxX));
-    var aleatorioY = Math.abs(Math.floor(Math.random() * maxY));
+    var maxX = larguraJanela/1.5 - btnRevelarChave.offsetWidth - 200;
+    var maxY = alturaJanela/1.5 - btnRevelarChave.offsetHeight - 200;
+
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
 
     btnRevelarChave.style.left = aleatorioX + "px";
     btnRevelarChave.style.top = aleatorioY + "px";
 
     console.log(aleatorioX + "px", aleatorioY + "px")
     contTentativas--;
-    btnRevelarChave.blur()
+    btnRevelarChave.blur();
     if (contTentativas == 0){
         console.log("A senha é: ", chaveSecretaCorreta)
         btnRevelarChave.style.display = "none";
@@ -136,7 +138,7 @@ function fuja() {
 
 }
 
-btnRevelarChave.addEventListener("mouseover", fuja, false);
+btnRevelarChave.addEventListener("click", fuja, false);
 
 btnVerificarChave.addEventListener('click', () => {
     const chaveSecretaDigitada = inputChaveSecreta.value.trim();
